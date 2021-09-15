@@ -1,0 +1,35 @@
+body{margin:0px;}
+
+/* navigator, nav style setting */
+nav{
+    display: flex;
+}
+
+nav>.logo{
+	flex:none;width:100px;
+    background-color:#ffcccc;
+}
+nav>.menu{
+    flex:auto;
+	background-color:#ccccff;
+}
+nav>.user{
+	flex:none;width:100px;
+    background-color:#ccffcc;
+}
+
+/* main style setting */
+
+main{ /* Container */
+	display:flex;
+    justify-content:center;
+    /* also try: flex-end,center, stretch(default setting) */
+    align-items:flex-start;
+	background-color:#cccccc;
+}
+main>.item{ /* Item */
+	flex:none;  /*none = the item is fixed */
+	width:300px;margin:10px;
+	background-color:#ffcccc;
+}
+

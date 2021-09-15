@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript</title>
+<script type="text/javascript">
+
+/* 1. if statement
+    If the statement is true, the code inside of {} would be executed. 
+On the contrary, it would be ignored when it's false.
+
+
+var money=prompt("How much money would you like to withdraw?");
+if(money>30000) {
+    alert("You've reached the withdraw money limit within a day.");
+}
+
+*/
+
+/* 2. if else statement
+    Following the statement above, if the first statement is false, else {} would be executed.
+
+var money=prompt("How much money would you like to withdraw?", "");
+if(money>30000) {
+    alert("You've reached the withdraw money limit within a day.");
+}else{
+    alert("Your money is preparing. Don't forget your ATM card.");
+}
+*/
+
+/* 3. if else statement (multiple filters)
+    Following the 2nd statement, when we need more filters to execute the operation.
+    That is, if both of the first statement and former else if {} are false, the latter else if {} would be executed until the value complies with the string.
+
+var n=prompt("How much money would you like to withdraw?", "");
+if(n>500) {
+    alert(n+">500");
+}else if (n>300){
+    alert(n+">300");
+}else if (n>150){
+    alert(n+">150");
+}else {
+    alert(n+"<=150");
+}
+*/
+
+//Example
+var n1=prompt("Please key in a random number.","");
+var n2=prompt("Please key in a random number.","");
+/*Transfer the data type: from string to number
+The number user keys in would be consider as a string, like "7" instead of purely 7,
+so if n1 is "7", n2 is "7", and the symbol is +, the result would be 77 instead of 14.
+To change the data type, we have to transfer it from string to number.
+*/
+n1=Number(n1); //Number(data)
+n2=Number(n2);
+
+var op=prompt("Please key in a math symbol: +, -, *, /",""); //op = operator
+var result;
+if(op=="+") {
+    result=n1+n2;
+}else if (op=="-"){
+    result=n1-n2;
+}else if (op=="*"){
+    result=n1*n2;
+}else if (op=="/"){
+    result=n1/n2;
+}else {
+    result="This operator does not comply with the rule.";
+}
+alert(result);
+
+
+</script>
+</head>
+</html>

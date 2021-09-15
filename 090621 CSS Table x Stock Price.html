@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Table x Stock Price</title>
+<style type="text/css">
+body{
+	font-size:16;font-family:"Arial"
+}
+table{
+	width:500px;	
+	border-collapse:collapse;
+}
+td{
+	border-bottom:1px solid #888888;padding:8px;
+}
+/* The first pair of tr child */
+tr:nth-child(1){
+	background-color:#5B92E6;color:#ffffff;
+}
+/* Even tr */
+tr:nth-child(even){
+	background-color:#e8e8e8;
+}
+</style>
+</head>
+<body>
+	<h2>Stock Price</h2>
+	<table>
+		<tr>
+			<td><b>Industry</b></td>
+			<td><b>Company</b></td>
+			<td><b>Price</b></td>
+		</tr>
+		<tr>
+			<td>IC</td>
+			<td>TSMC</td>
+			<td>631</td>
+		</tr>
+		<tr>
+			<td>IC</td>
+			<td>UMC</td>
+			<td>69.9</td>
+		</tr>
+		<tr>
+			<td>Battery</td>
+			<td>BenQ Materials</td>
+			<td>36.15</td>
+		</tr>
+	</table>
+</body>
+</html>

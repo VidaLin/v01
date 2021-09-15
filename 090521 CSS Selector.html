@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Selector</title>
+<style type="text/css">
+/* Tag Name Selector */
+body{
+	font-size:16;font-family:"Arial"
+}
+h3{
+	font-size:24;text-decoration:underline;
+}
+/* Class Selector */
+div.content{
+	padding:10px;border:1px dashed #888888;
+}
+/* id Selector */
+#btn{
+	border:1px solid #888888;
+	background-color:#ffffff;padding:5px;
+}
+/* Pseudo-classes Selector: used with other selectors */
+/* #:hover：for button clicking design*/
+#btn:hover{
+	background-color:#888888;
+}
+/* #:focus：for getting focus*/
+input:focus{
+	border:2px solid #ff0000;
+}
+
+
+/* Cascading Selector: used with other selectors */
+.content1 a{
+	color:#0000ff;
+}
+.content2 a{
+	color:#008800;
+}
+
+
+</style>
+	
+</head>
+
+<body>
+	<div class="title"><h2>Jobs in Australia</h2></div>
+	<div class="content">
+		Job information in Australia.
+	</div>
+	
+	
+	<h3>AU Local Jobs</h3>
+	<ul class="content2">
+		<li><a href="https://www.seek.com.au/">Seek</a></li>	
+		<li><a href="https://jobsearch.gov.au/job/search">Jobactive</a></li>
+	</ul>
+	
+	<h3>Global Jobs</h3>
+	<ul class="content3">
+		<li><a href="https://angel.co/jobs">AngelList</a></li>	
+		<li><a href="https://tw.indeed.com/">Indeed</a></li>	
+	</ul>
+	
+	<h3>Search Cross-platform</h3>
+	<div class="content">
+		Keyword<input type="text" /> <button id="btn">送出</button>
+		
+		
+	
+</body>
+</html>
