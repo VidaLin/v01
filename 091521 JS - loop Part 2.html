@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS - loop Part 2</title>
+<script type="text/javascript">
+
+/* 1+2+........+50 Arithmetic Operations*/
+var sum=0;
+var n=1;
+while(n<=200){
+    sum=sum+n; //sum+=n
+    n++;
+}
+alert(sum);
+
+/* Detailed loop tracking
+    sum  ;  n
+0:   0   ;  1
+1:   1   ;  2
+2:   3   ;  3
+3:   6   ;  4
+4:  10   ;  5
+...
+...
+200: 20100 ;  201
+
+=> sum = 20100 
+
+*/
+
+/* continue: command and execution*/
+var x=0;
+for(var i=0;i<200;i++){
+    if(i%4==0){ //→ i can be divided exactly by 4.
+        continue;
+    }
+    x++;
+}
+alert(x);
+
+/* Detailed loop tracking
+    x  ;  i
+0:  0  ;  0
+1:  0  ;  1
+2:  0  ;  2
+3:  0  ;  3
+4:  1  ;  4
+...
+...
+100: 150 ; 200
+
+=> x = 150
+
+*/
+
+</script>
+</head>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS - function</title>
+<script type="text/javascript">
+
+/* Design a function
+function test() {
+    alert(message);// function body
+}
+ 
+// Calling single functions //
+test("Byebye Covid-19"); 
+test(“Welcome to the 2.0 world”);
+
+*/
+/* Calling multiple functions
+function add(n1,n2) { 
+    alert(n1+n2);
+}
+add(1,100);
+add(2,200);
+// => result = 101,202
+*/
+
+/* 
+function add(n1,n2) {
+    alert(n1+n2);
+    return n1+n2; // → means it's finished
+}
+var result=add(1,100)*add(2,200);
+alert(result);
+// => result = 101, 202, 20402
+*/
+
+/* ## Final example integrating the functions above */
+//while loop
+function getSum(max){
+    sum=0
+    var n=1;
+    while(n<=max){
+        sum+=n;
+        n++;
+        
+    }
+    alert(sum);
+    return sum;
+}
+var result=getSum(50)*getSum(100);
+alert(result);
+/* 
+// for loop
+function getSum(max){
+    sum=0
+    for(var n=1;n<=max;n++){
+    sum+=n;
+    }
+    alert(sum);
+    return sum;
+}
+var result=getSum(50)*getSum(100);
+alert(result);
+// => result = 1275, 5050, 6438750
+*/
+
+</script>
+</head>
+</html>
