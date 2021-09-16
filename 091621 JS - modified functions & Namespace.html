@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS - function</title>
+<script type="text/javascript">
+
+/* Modified functions(變形函式)
+Before introducing modified function, let's recall our memory about the "basic function":
+function add(n1,n2) {
+    alert(n1+n2);
+
+And this is how a modified function look like:*/
+var add=function (n1,n2) { 
+    alert(n1+n2);
+}
+add(1,100); // → call the function 
+var test=add; // → didn't call the function, so it purely input the data into the variable above.
+test(2,200);
+
+/* The meaning behind these two functions is actually the same, but the modified one input the function into the variable.
+Function is a kind of data as well.*/
+
+
+
+/* function block creates space
+* With function block, it creates a new space for coding. 
+* 2 spaces: global variable(全域變數 or 全域空間)、local variable(區域變數 or 區域空間)
+*/
+var x=13; // → global variable
+function test() { // → local variable
+    var y=7;
+    var x=1;
+    alert(x+y);
+}
+alert(x);
+
+/*external code can not use the local variable, but local variable can use global variable.
+For example, if we don't declare the x variable at local variable,'var x=13' will be used right away. */
+var x=13;
+function test() { 
+    var y=7;
+    alert(x+y);
+}
+alert(x);
+
+
+</script>
+</head>
+</html>
