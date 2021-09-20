@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Object Constructors</title>
+<script type="text/javascript">
+
+
+/* Constructors*/
+
+//Example: This time, we will have 2 trips
+
+function Trip(name,score){ //If we are creating a construtor function, usually we'll use capital letter.
+    this.name=name; //"this" represents an empty object auto created by the system.
+    this.score=score;
+    this.outdoor=function(){ 
+        this.score=this.score+10;
+    };
+    this.rainyDay=function(){ 
+        this.score=this.score-5;
+    };
+    this.snacksnBBQ=function(){ 
+        this.score=this.score+20;
+    };
+    this.napping=function(){ 
+        this.score++;
+    };
+    this.report=function(){ 
+        alert(this.name+":"+this.score)
+    };
+
+}
+
+var trip1=new Trip("Couple Trip",70); //befor constructor, adding a "new" 
+trip1.outdoor(); 
+trip1.napping(); 
+trip1.report();
+
+var trip2=new Trip("Company Trip",60);
+trip2.rainyDay(); 
+trip2.snacksnBBQ(); 
+trip2.report();
+
+//The result is 
+
+
+
+</script>
+</head>
+</html>
