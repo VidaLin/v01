@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS - HTML DOM</title>
+<script type="text/javascript">
+function LuckyDraw() {
+    var spanObj=window.document.getElementById("reward"); 
+    /*
+    This syntax changes the content of an HTML element when it’s needed.
+    "window" can be omitted. 
+    We name an id, reward, to revise the body easily. 
+    spanObj is a tag Object. It is related with <span id="reward">pineapple cheese</span>. 
+    */
+
+    spanObj.innerHTML="lemon"; //innerHTML is a property for us to easily modify the content of an HTML element.
+    spanObj.style.color="green";
+    spanObj.style.fontFamily="Arial"; //When CSS transfers to JS, the second word should be written in capital letter. 
+    spanObj.style.fontWeight="bold";
+    spanObj.style.display=none;
+}
+
+</script>
+</head>
+<body style="font-family:Arial">
+    <div>
+        Congratulations! You won a piece of <span id="reward">pineapple cheese</span> cake!
+    </div>
+    <button onclick="LuckyDraw();">Lucky Draw</button>
+
+</body>
+</html>

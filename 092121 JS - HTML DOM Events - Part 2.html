@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS - HTML DOM Events - Part 1</title>
+<script type="text/javascript">
+function toggleMenu(number) {  //With the argement, nember, toggleMenu can get the relating list.
+    var menu=document.getElementById("menu"+number); 
+    menu.classList.toggle("hide"); //toggle is for controlling the "hide" class setting.
+    /*
+    if(menu.style.display=="none") {//means that it's hidden now.
+        menu.style.display=="block";
+    }
+    else{//means that it's displaying now.
+        menu.style.display=="none";
+    }
+    menu.innerHTML=""; //innerHTML is a property for us to easily modify the content of an HTML element.
+    menu.style.fontFamily="Arial";
+    menu.style.display=none;
+    */
+}
+
+</script>
+<style type="text/css"> 
+    .hide{display:none;} 
+    /*With this class selector and the we don't need the if statement above.*/
+
+</style>
+</head>
+<body style="font-family:Arial;color:rgb(44, 99, 99)">
+    <div onclick="toggleMenu(1);">Auntie Style</div>
+    <ul id="menu1">
+        <li>Beef Noodle</li>
+        <li>Fried Shrimp Noodle</li>
+    </ul>
+    <div onclick="toggleMenu(2);">Uncle Style</div>
+    <ul id="menu2">
+        <li>Pork Noodle</li>
+        <li>Fried Squid Noodle</li>
+    </ul>
+    <div onclick="toggleMenu(3);">Grandparents Style</div>
+    <ul id="menu3">
+        <li>Happy Noodle</li>
+        <li>Surprise Noodle</li>
+    </ul>
+</body>
+</html>

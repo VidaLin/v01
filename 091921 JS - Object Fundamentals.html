@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS - object</title>
+<script type="text/javascript">
+
+
+/* empty Object 
+var point=new Object();
+*/
+
+/* Elements creating Object: property and method
+point.x=3; //property
+point.y=4;
+point.getPosition=function(){ //method
+    alert(this.x+","+this.y);
+} ;
+*/
+
+/* Use Object
+point.getPosition(); //→ call the function.  So from the example above, we'll get "3,4"
+*/
+
+/* Example: The score of an ideal trip*/
+var trip=new Object();
+trip.name="The score of an ideal trip"; 
+trip.score=70;
+trip.outdoor=function(){ // Camping at outdoor so that we can enjoy natural environment.
+    this.score=this.score+10;
+};
+trip.rainyDay=function(){ //Rainy day is a bit troublesome that we can't go hiking.
+    this.score=this.score-5;
+};
+trip.snacksnBBQ=function(){ //Delicious food is always welcome!
+    this.score=this.score+20;
+};
+trip.napping=function(){ //Chilled camping always needs a nap.
+    this.score++;
+};
+trip.report=function(){ //
+    alert(this.name+":"+this.score)
+};
+
+//So at the end, the way we count the score of an ideal trip would be...
+trip.outdoor(); 
+trip.rainyDay(); 
+trip.snacksnBBQ(); 
+trip.napping(); 
+trip.report(); 
+//The result is 96!
+
+
+
+</script>
+</head>
+</html>
