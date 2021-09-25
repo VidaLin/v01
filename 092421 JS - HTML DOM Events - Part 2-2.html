@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS - HTML DOM Events - Part 2-2</title>
+<script type="text/javascript">
+// Advanced way to register an event dynamically through JS.
+function init(){ //init = initialization
+    var btn=document.getElementById("btn");
+    var handler=function(){ // prepare an event listener, aka a event handler
+        alert("Clicked");
+    }
+    btn.addEventListener("click"/*event name*/, handler);
+}
+</script>
+</head>
+<body onload="init();">  <!-- Statically register the "load" event on <body>. Onload event will be initialized once the webpage is fully loaded. -->
+    <button id="btn">Click</button>
+
+   
+</body>
+</html>

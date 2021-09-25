@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS - HTML DOM Events - Part 2-3</title>
+<!-- Start over again to learn Event handling  -->
+</head>
+<body>
+    <p id="title">Round 1 of HTML DOM</p> 
+    <!-- In <body></body>, write down <p> and <button> tags, and add id to them, so that we can get the tag id when coding in JavaScript.  -->
+    <button id="btn">Button</button>
+
+    <div id="box">Box</div>
+    <!-- input lets users key in context in a single line.  -->
+    <input id="input1" type="text"> 
+    
+    <script type="text/javascript">
+        //Add an event listener--load--for this window to monitor this web page, so that when the page is fully loaded, the listerner will call back(回呼) the function.
+        window.addEventListener('load', function() { 
+            const p1 = document.getElementById('title') //After we get the <p> tag, we can revise the context easily.
+            console.log(p1)
+            p1.innerText="Round 2 of HTML DOM" //Revise the title by innerText property. Intro of "innerText": https://www.w3schools.com/jsref/prop_node_innertext.asp
+            
+            const b1 = document.getElementById('btn')
+            //Add an event listener to monitor the behavior--click, so that when the button is clicked, the listener will call back the function.
+            b1.addEventListener('click',function() {
+            console.log('Clicking')
+            })
+
+            //An example of inserting an HTML
+            const box1 = document.getElementById('box')
+            box1.innerHTML= '<p>Welcome to HTML DOM v2.0</p>'
+            
+            //Scenario: when creating a register page, we may need a listener to monitor the user's behavior, e.g. the password they key in.
+            const in1 = document.getElementById('input1')
+            in1.addEventListener('keyup',function(event) { //keyup = click a button of a keyboard and it bounce back right away.
+            console.log('event.target.value',event.target.value)
+            })
+        })
+        //
+        </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS - HTML DOM Events - Part 2-1</title>
+<script type="text/javascript">
+//Simple way to egister an event
+function over(element){
+    element.style.color="orange";
+}
+function out(element){
+   element.style.color="black"; 
+}
+</script>
+</head>
+<body style="font-family:Arial";>
+    <button onclick="alert('Clicked');">Click</button> <!-- Registering an event -->
+    <span onmouseover="over(this);"
+        onmouseout="out(this);">Get your cursor here to know my real color.</span>
+    <div onmouseover="over(this);"
+        onmouseout="out(this);">Closer, closer, closer!</div>
+        
+</body>
+</html>
