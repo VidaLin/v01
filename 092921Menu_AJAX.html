@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu - AJAX Practice</title>
+<h3>Lovely Auntie's Blog</h3>
+</head>
+
+<!-- Add onload="getData('Writing.html')" to body will present the Writing page's content once we open up the menu page.  -->
+<body onload="getData('092921Writing_AJAX.html')" style="font-family:Arial">
+    <div>
+    <!--AJAX helps request other pages through the server immediately when we click Writing or Portfolio at this Menu page.  -->
+        <span style=color:cadetblue onclick="getData('092921Writing_AJAX.html');">Writing</span>
+        <span style=color:rgb(219,77,26) onclick="getData('092921Portfolio_AJAX.html');">Portfolio</span>
+    </div>
+    <!-- adding a horizontal line -->
+    <hr/>
+    <div id="content"></div> 
+
+    <script type="text/javascript">
+    function getData(pageName){
+    //AJAX XMLHttpRequest object: for connecting with the server.
+        let req=new XMLHttpRequest();
+        req.open("get","http://127.0.0.1:8887/"+pageName); //setting the connection and URL.
+        req.onload=function(){ //Use load event to detect when the connection is finished.  
+        // From here, the connection is done.
+            let content=document.getElementById("content");
+            content.innerHTML=this.responseText;
+        };
+        req.send();//Call the "send" to send out the connection request.
+    }   
+    </script>
+</body>
+</html>

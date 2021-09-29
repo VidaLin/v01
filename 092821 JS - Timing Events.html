@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS - Timing Events</title>
+</head>
+<body onload="init();">
+    <!-- count down from 3 seconds-->
+    <span id="timer">3</span> 
+
+<script type="text/javascript">
+let timer;
+function init(){ 
+    timer=document.getElementById("timer");
+    window.setInterval(countdown, 1000); //The unit is milliseconds, so 1000 milliseconds = 1 second.
+}
+
+/*Basic Timing Events
+function countdown (){
+    alert("Hooray!!! The 30 day iTHelp Ironman game is in the final countdown!");
+}
+*/
+
+/*Example 1. setTimeout
+function countdown (){
+    timer.innerHTML=timer.innerHTML-1;
+    if(timer.innerHTML>0){ //It will continue counting down until meeting 0.
+        window.setTimeout(countdown, 1000);  
+    }else{
+        document.location="https://vidalin-777.medium.com/";
+    }
+}
+*/
+
+//Example 2. setInterval
+function countdown (){
+    timer.innerHTML=timer.innerHTML-1;
+    if(timer.innerHTML>0){
+    }else{
+        document.location="https://www.youtube.com/watch?v=QMQNvkyHrhg&list=OLAK5uy_ktyiw8wo_G1oNIUiNkxe7XdIHhakmWBxs&index=10";
+    }
+}
+
+</script>
+</body>
+</html>
